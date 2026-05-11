@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Books Details</title>
+    <link rel="stylesheet" href="style.css">
+  <style>
+    body {font-family: Cambria, Georgia, serif;background-color: #E8F5E9;color: #333;margin: 0;padding: 0;}
+    header {background-color: #7B2C3B;color: white;padding: 15px;text-align: center;}
+    header .navbar a {color: white;margin: 0 10px;text-decoration: none;font-weight: bold;}
+    header .navbar a:hover {text-decoration: underline;}
+    .container {max-width: 800px;margin: 30px auto;background: #FFF;border-radius: 10px;padding: 20px;box-shadow: 0 4px 8px rgba(0,0,0,0.1);}
+    .book-info {display: flex;gap: 20px;align-items: flex-start;}
+    .book-info img {width: 250px;border-radius: 8px;}
+    .details h2 {color: #7B2C3B;margin-bottom: 10px;}
+    .buttons {margin-top: 15px;}
+    .buttons a, .buttons button {
+      background-color: #7B2C3B;color: white;border: none;border-radius: 6px;
+      padding: 10px 16px;margin-right: 10px;cursor: pointer;text-decoration: none;
+    }
+    .buttons a:hover, .buttons button:hover {background-color: #5a1f2b;}
+  </style>
+</head>
+<body class="Catalog-page">
+  <header class="main-header">
+    <h1 class="logo">Books Details</h1>
+    <nav class="navbar">
+      <a href="home.html">Home</a>
+      <a href="Login.html">Login</a>
+      <a href="Categories.html">Categories</a>
+      <a href="Searching.html">Search</a>
+      <a href="orders.html">Cart</a>
+      <a href="About.html">About</a>
+      <a href="Contact.html">Contact</a>
+      <a href="policies.html">Policies</a>
+      <a href="account.html">Account</a>
+    </nav>
+  </header>
+  <div id="books-root"></div>
+  <script type="text/xml" id="xmlData">
+    <library>
+     <book>
+        <image>img/Edu01.png</image>
+        <title>نظرية كل شيء</title>
+        <author>Paul Davies and Julian Brown</author>
+        <category>Education / Science</category>
+        <description>هو عمل علمي يناقش مفهوم الأوتار الفائقة وتداعياتها في الفيزياء النظرية، متسائلاً عما إذا كانت تمثل "نظرية كل شيء" الموحدة</description>
+      </book>
+      <book>
+        <image>img/Edu02.png</image>
+        <title>A Mind For Numbers</title>
+        <author>Barbara Oakley</author>
+        <category>Education / Math</category>
+        <description>يوفر هذا الدليل العلمي نصائح عملية وقائمة على أسس علمية لمساعدة القارئ على التعلم بعمق وسهولة، خاصة في مجالات الرياضيات والعلوم</description>
+      </book>
+      <book>
+        <image>img/Dramab.png</image>
+        <title>كل أزرق السماء</title>
+        <author>ميليسا دا كوستا</author>
+        <category>Drama</category>
+        <description>تروي الرواية قصة إميل، شاب يبلغ من العمر 26 عامًا ومصاب بالزهايمر المبكر، يقرر الهروب في رحلة أخيرة إلى الريف الفرنسي بمشاركة شابة غامضة تُدعى جوانا</description>
+      </book>
+      <book>
+        <image>img/DramaC.png</image>
+        <title>The Convenience Store By The Sea</title>
+        <author>Sonoko Machida</author>
+        <category>Drama</category>
+        <description>هذه الرواية الأكثر مبيعاً عالميًا، تُقدم قصصًا دافئة ومؤثرة حول التفاعلات الإنسانية التي تدور داخل وحول متجر بقالة بسيط يقع على شاطئ البحر</description>
+      </book>
+      <book>
+        <image>img/DramaL.png</image>
+        <title>بينما تنمو اشجار الليمون</title>
+        <author>زلفى ياسر درويش</author>
+        <category>دراما</category>
+        <description>تتبع الرواية قصة سلامة، الشابة السورية من مدينة حمص، التي تمزقها محنة مدينتها المحاصرة وتضطر للاختيار بين البقاء كطبيبة وحيدة أو مغادرة هذا الجحيم</description>
+      </book>
+      <book>
+        <image>img/Phila01.png</image>
+        <title>حالة الاستثناء</title>
+        <author>جورجيو أغامبن</author>
+        <category>فلسفي</category>
+        <description>يناقش الكتاب إشكالية السيادة في الدولة الحديثة، ويتساءل عن مصدر الشرعية بين سلطة التشريع البرلمانية وسلطة الحاكم التنفيذية التي تملك تعليق القانون في حالات الطوارئ</description>
+      </book>
+      <book>
+        <image>img/phila02.png</image>
+        <title>الفكر الجمهوري</title>
+        <author>ماوريتسيو فيرولي</author>
+        <category>فلسفي</category>
+        <description>يقدم هذا الكتاب، الذي ألفه أستاذ النظريات السياسية في جامعة برنستون، تحليلاً مفصلاً ومناقشة متعمقة للفكر والنظريات السياسية الجمهورية</description>
+      </book>
+      <book>
+        <image>img/phila03.png</image>
+        <title>محاورة فيدون</title>
+        <author>أفلاطون</author>
+        <category>فلسفي</category>
+        <description>تُعد هذه المحاورة الفلسفية لأفلاطون جزءًا من سلسلة محاورات سقراط وتتمحور حول مناقشة مفهوم خلود النفس</description>
+      </book>
+      <book>
+        <image>img/Myst01.png</image>
+        <title>مذكرات شيرلوك هولمز</title>
+        <author>آرثر كونان دويل</author>
+        <category>غموض</category>
+        <description>تتناول هذه المجموعة مجموعة من القضايا الجنائية للمحقق شيرلوك هولمز، وتتوج بمواجهته الأخيرة والحتمية مع عدوه اللدود البروفيسور موريارتي عند شلالات رايشنباخ</description>
+      </book>
+      <book>
+        <image>img/Myst02.png</image>
+        <title>دليل الشمعة الملتوية</title>
+        <author>ادجار والاس</author>
+        <category>غموض</category>
+        <description>رواية جريمة يتم فيها استعراض تفاصيل مثيرة من خلال بطل الرواية جون لكسمان، الذي يقدم نظرية مقنعة للغاية لكيفية ارتكاب الجريمة ودافعها</description>
+      </book>
+      <book>
+        <image>img/Myst03.png</image>
+        <title>الممثلون الغافلون</title>
+        <author>بلزاك</author>
+        <category>غموض</category>
+        <description>هي إحدى "صور من الحياة الباريسية" وجزء من سلسلة بلزاك الملحمية الملهاة الإنسانية، وتعتبر دراسة أدبية لطبائع البشر</description>
+      </book>
+    </library>
+  </script>
+  <script>
+    const xmlText = document.getElementById("xmlData").textContent.trim();
+    const parser = new DOMParser();
+    const xmlDoc = parser.parseFromString(xmlText, "text/xml");
+
+    const books = xmlDoc.getElementsByTagName("book");
+    let htmlContent = "";
+
+    // قائمة الكتب المجانية (حسب العناوين)
+    const freeBooks = ["حالة الاستثناء", "محاورة فيدون", "دليل الشمعة الملتوية", "A Mind For Numbers", "كل أزرق السماء"];
+
+    for (let i = 0; i < books.length; i++) {
+      const image = books[i].getElementsByTagName("image")[0].textContent;
+      const title = books[i].getElementsByTagName("title")[0].textContent;
+      const author = books[i].getElementsByTagName("author")[0].textContent;
+      const category = books[i].getElementsByTagName("category")[0].textContent;
+      const description = books[i].getElementsByTagName("description")[0].textContent;
+
+      // تحقق إذا الكتاب مجاني
+      const isFree = freeBooks.includes(title);
+
+      htmlContent += `
+        <div class="container">
+          <div class="book-info">
+            <img src="${image}" alt="${title}">
+            <div class="details">
+              <h2>${title}</h2>
+              <p><strong>Author:</strong> ${author}</p>
+              <p><strong>Category:</strong> ${category}</p>
+              <p><strong>Description:</strong> ${description}</p>
+              <div class="buttons">
+                ${isFree ? `<a href="reader.html?book=${encodeURIComponent(title)}">Read Now</a>` : ""}
+                <button onclick="addToLibrary('${title}')">Add to the library</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+    document.getElementById("books-root").innerHTML = htmlContent;
+
+    function addToLibrary(bookName) {
+      alert("The Book Is Added " + bookName + " To Your Library");
+    }
+  </script>
+</body>
+</html>
